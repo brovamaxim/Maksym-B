@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Галерея</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", Arial, sans-serif;
+            background: #fafafa;
+            color: #111;
+        }
+        nav {
+            text-align: center;
+            padding: 20px;
+            background: #ffffffcc;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e5e5e5;
+        }
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #0071e3;
+            font-weight: 500;
+        }
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 42px;
+            margin-bottom: 40px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 260px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px #00000015;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
 
+    <nav>
+        <a href="../index.html">Головна</a>
+        <a href="contact.html">Контакти</a>
+        <a href="gallery.html">Галерея</a>
+    </nav>
+
+    <main class="container">
+        <h1>Галерея</h1>
+
+        <div class="gallery">
+            <img src="../images/dog.jpg" alt="Собака">
+            <img src="../images/dog1.jpg" alt="ще одна Собака">
+        </div>
+    </main>
+
+   </tr>
+        <th>Хочеш заброньювати цуценя? Напиши мені</th>
+   </tr> 
+  
+  <form action="/submit" method="post">
+        <input type="text" name="username" placeholder="ім'я">
+        <input type="text" name="введіть текст" placeholder="текст">
+        <button type="submit">Відправити</button> 
+  </form>
+
+</body>
+</html>
