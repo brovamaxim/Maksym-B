@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    background: #fafafa;
+    color: #111;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+body.dark {
+    background: #000;
+    color: #fff;
+}
+
+nav {
+    text-align: center;
+    padding: 20px;
+    background: #ffffffcc;
+    border-bottom: 1px solid #e5e5e5;
+    backdrop-filter: blur(10px);
+}
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #0071e3;
+    font-weight: 500;
+}
+body.dark nav {
+    background: #111111cc;
+}
+body.dark nav a {
+    color: #4da3ff;
+}
+
+.container {
+    flex: 1;
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 24px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px #00000040;
+    transition: filter 0.5s ease, box-shadow 0.5s ease;
+}
+body.dark .avatar {
+    filter: brightness(1.4);
+    box-shadow: 0 0 40px #ffffffaa;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 40px;
+}
+.subtitle {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+body.dark .subtitle {
+    color: #ccc;
+}
+
+.gallery img {
+    width: 260px;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0 10px 30px #00000015;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px #00000015;
+}
+th, td {
+    padding: 14px;
+    border: 1px solid #ddd;
+}
+th {
+    background: #f2f2f2;
+    font-weight: 600;
+}
+
+form {
+    margin-top: 30px;
+}
+input {
+    padding: 12px 16px;
+    margin: 6px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 250px;
+}
+button {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    background: #0071e3;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover {
+    background: #005bb5;
+}
+
+.switch-wrapper {
+    margin-top: 20px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 34px;
+}
+.switch input {
+    display: none;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: #0071e3;
+}
+input:checked + .slider:before {
+    transform: translateX(36px);
+}
+
+footer img {
+    width: 100%;
+    display: block;
+    margin-top: 40px;
+}
