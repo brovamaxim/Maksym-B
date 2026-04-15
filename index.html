@@ -3,45 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Про мене</title>
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <nav>
-        <a href="index.html">Головна</a> |
-        <a href="pages/contact.html">Контакти</a> |
-        <a href="pages/gallery.html">Галерея</a> |
+        <a href="index.html">Головна</a>
+        <a href="contact.html">Контакти</a>
+        <a href="gallery.html">Галерея</a>
         <a href="https://lms.ithillel.ua/">Навчання</a>
     </nav>
 
-    <main>
-        <img src="images/me.jpg" alt="Фото" width="180" height="180">
+    <div class="switch-wrapper">
+        <label class="switch">
+            <input type="checkbox" id="darkToggle">
+            <span class="slider"></span>
+        </label>
+        <div>Перемикач світла</div>
+    </div>
+
+    <main class="container">
+        <img src="images/me.jpg" class="avatar" alt="Фото">
 
         <h1>Maksym</h1>
-        <p>QA Engineer • Father • Tech Enthusiast • Owner of two dogs</p>
+        <p class="subtitle">QA Engineer • Father • Tech Enthusiast</p>
 
-        <p><strong>Хобі:</strong> робити дз( , технології, подорожі які зараз неможливі</p>
-        <p><strong>Про себе:</strong> тестування, мінімалізм і сучасні технології</p>
+        <p><strong>Хобі:</strong> робити дз, технології, подорожі які зараз неможливі, шахи </p>
+        <p><strong>Про себе:</strong> тестуванння, мінімалізм і сучасні технології.</p>
     </main>
 
-    <table border="1">
-        <tr>
-            <th>Відправ повідомлення</th>
-        </tr>
-        <tr>
-            <td>Hi There</td>
-        </tr>
-    </table>
+    <footer>
+        <img src="images/footer.jpg" alt="footer">
+    </footer>
 
-    <form action="/submit" method="post">
-        <input type="text" name="username" placeholder="ім'я">
-        <input type="text" name="text" placeholder="текст">
-        <button type="submit">Відправити</button>
-    </form>
-
-    <img src="images/footer.jpg" alt="footer" width="100%">
+    <script>
+        document.getElementById("darkToggle").addEventListener("change", () => {
+            document.body.classList.toggle("dark");
+        });
+    </script>
 
 </body>
 </html>
-
